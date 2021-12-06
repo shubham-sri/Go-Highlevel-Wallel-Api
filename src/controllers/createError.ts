@@ -29,12 +29,14 @@ export const ErrorControllers = {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _next: NextFunction,
   ): Promise<void> {
+    let message = error.message
     if (error.status && error.status < 500) {
       Logger.warn(`${error.module}: ${error.message}`, {
         error: error.object,
         type: 'client',
       })
     } else {
+      message = NODE_ENV !== 'dev' ? ExpressMessage.somethingWrong : message
       Logger.warn(`${error.module}: ${error.message}`, {
         error: error.object,
         type: 'server',
@@ -42,8 +44,7 @@ export const ErrorControllers = {
     }
     res.status(error.status || 500)
     res.send({
-      status: error.status,
-      message: error.message,
+      message,
       object: NODE_ENV === 'dev' ? error.object : undefined,
     })
   },

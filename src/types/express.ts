@@ -8,19 +8,21 @@ export enum ExpressStatusCode {
   authForbidden = 403,
   notFound = 404,
   status422 = 422,
+  notAllowed = 405,
   serverError = 500,
 }
 
 export enum ExpressMessage {
   somethingWrong = `Something went wrong!`,
   notFound = 'Not found!',
+  walletNotFound = 'Wallet not found!',
+  walletLowBalance = 'Wallet balance id low!',
   badRequest = 'Invalid request body!',
   notFoundData = 'No data found!',
   ok = 'Ok!',
 }
 
 export interface ExpressErrorBody {
-  status: ExpressStatusCode
   message: ExpressMessage
   object?: Error
 }

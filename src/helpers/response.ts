@@ -3,9 +3,9 @@ import { ErrorResponseModel, SuccessResponseModel } from '../models'
 import { ExpressNextFunction } from '../types'
 
 export class ResponseHelper {
-  public static dispatch(
+  public static dispatch<T = any>(
     res: Response,
-    payload: ErrorResponseModel | SuccessResponseModel,
+    payload: ErrorResponseModel | SuccessResponseModel<T>,
     next?: ExpressNextFunction,
   ): void {
     if (payload instanceof SuccessResponseModel) {

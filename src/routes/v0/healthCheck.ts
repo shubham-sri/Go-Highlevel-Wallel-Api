@@ -5,6 +5,18 @@ const router = Router()
 
 /**
  * @swagger
+ * components:
+ *   schemas:
+ *     CommonPayload:
+ *       properties:
+ *         status:
+ *           type: number
+ *         message:
+ *           type: string
+ */
+
+/**
+ * @swagger
  * /v0/health-check:
  *   get:
  *     tags:

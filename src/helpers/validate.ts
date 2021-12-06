@@ -3,8 +3,8 @@ import { ObjectSchema } from 'joi'
 import { Request, Response } from 'express'
 
 export class Validate {
-  public static async validate(
-    req: Request,
+  public static async validate<T = any>(
+    req: Request<T>,
     _res: Response,
     next: ExpressNextFunction,
     validator: ObjectSchema,

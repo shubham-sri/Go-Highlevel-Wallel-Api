@@ -1,0 +1,389 @@
+{
+  "info": {
+    "_postman_id": "fa532013-a613-4ccd-a20b-87df9dc262c9",
+    "name": "Go-Highlevel-Wallet-Api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Wallet",
+      "item": [
+        {
+          "name": "Add Wallet",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Hello\",\n    \"balance\": 100\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/v0/wallet",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "v0",
+                "wallet"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Add Wallet",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Hello\",\n    \"balance\": 100\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/v0/wallet",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "v0",
+                    "wallet"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "152"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"98-a2s4CqKqukPfGFC3cv9x0coHSrc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 06 Dec 2021 18:47:35 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": \"63e90700-e2a7-404d-983a-ab7d47b88ffd\",\n    \"name\": \"hello\",\n    \"balance\": 100,\n    \"updatedAt\": \"2021-12-06T18:47:35.445Z\",\n    \"createdAt\": \"2021-12-06T18:47:35.445Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Wallet",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/v0/wallet/63e90700-e2a7-404d-983a-ab7d47b88ffd",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "v0",
+                "wallet",
+                "63e90700-e2a7-404d-983a-ab7d47b88ffd"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Wallet",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/v0/wallet/63e90700-e2a7-404d-983a-ab7d47b88ffd",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "v0",
+                    "wallet",
+                    "63e90700-e2a7-404d-983a-ab7d47b88ffd"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "152"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"98-gk48s8sHJueYXm/UtVFZtL6FqFo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 06 Dec 2021 18:48:01 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": \"63e90700-e2a7-404d-983a-ab7d47b88ffd\",\n    \"name\": \"hello\",\n    \"balance\": 100,\n    \"createdAt\": \"2021-12-06T18:47:35.445Z\",\n    \"updatedAt\": \"2021-12-06T18:47:35.445Z\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Transaction",
+      "item": [
+        {
+          "name": "Get Transactions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/v0/transactions?walletId=63e90700-e2a7-404d-983a-ab7d47b88ffd&skip=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "v0",
+                "transactions"
+              ],
+              "query": [
+                {
+                  "key": "walletId",
+                  "value": "63e90700-e2a7-404d-983a-ab7d47b88ffd"
+                },
+                {
+                  "key": "skip",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "0",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Transactions",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/v0/transactions?walletId=63e90700-e2a7-404d-983a-ab7d47b88ffd&skip=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "v0",
+                    "transactions"
+                  ],
+                  "query": [
+                    {
+                      "key": "walletId",
+                      "value": "63e90700-e2a7-404d-983a-ab7d47b88ffd"
+                    },
+                    {
+                      "key": "skip",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "0",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "209"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"d1-TlCm9CQ0cjoi/HItKIYNNJvE8FY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 06 Dec 2021 18:49:10 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": \"e8fe05ae-f89a-4a6d-a7c1-248c5e9bb447\",\n        \"description\": null,\n        \"amount\": \"100\",\n        \"walletId\": \"63e90700-e2a7-404d-983a-ab7d47b88ffd\",\n        \"createdAt\": \"2021-12-06T18:48:41.945Z\",\n        \"updatedAt\": \"2021-12-06T18:48:41.945Z\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Create Transaction",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"amount\": 100\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/v0/transact/63e90700-e2a7-404d-983a-ab7d47b88ffd",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "v0",
+                "transact",
+                "63e90700-e2a7-404d-983a-ab7d47b88ffd"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Transaction",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"amount\": 100\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:5000/v0/transact/63e90700-e2a7-404d-983a-ab7d47b88ffd",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5000",
+                  "path": [
+                    "v0",
+                    "transact",
+                    "63e90700-e2a7-404d-983a-ab7d47b88ffd"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "148"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"94-Mgzg/BSwKg+3a+wqxKW/Yw/4gWs\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 06 Dec 2021 18:48:19 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"transactionId\": \"4da77d5c-2d1c-4eff-a516-d7d27ebff6c7\",\n    \"balance\": 200,\n    \"createdAt\": \"2021-12-06T18:48:19.826Z\",\n    \"updatedAt\": \"2021-12-06T18:48:19.826Z\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
