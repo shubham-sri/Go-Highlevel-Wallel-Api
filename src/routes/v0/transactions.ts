@@ -7,7 +7,7 @@ const router = Router()
 /**
  * @swagger
  * /v0/transactions:
- *   post:
+ *   get:
  *     parameters:
  *     - in: query
  *       name: walletId
