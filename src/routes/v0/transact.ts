@@ -22,7 +22,7 @@ const router = Router()
 
 /**
  * @swagger
- * /v0/transaction/{walletId}:
+ * /v0/transact/{walletId}:
  *   post:
  *     parameters:
  *     - in: path
