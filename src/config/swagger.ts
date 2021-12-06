@@ -5,8 +5,8 @@ export const swaggerConfig = {
     openapi: '3.0.2',
     info: {
       version: 'v0',
-      title: 'Shanti Memorial APIs',
-      description: 'Skyome APIs documentation',
+      title: 'Wallet APIs',
+      description: 'Wallet APIs documentation',
     },
     servers: [
       {
