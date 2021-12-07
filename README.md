@@ -137,6 +137,10 @@ Used postgres for SQL db
 #### Postman collection
 [HERR](docs/postman/collection.json)
 
+#### Demo video
+
+[![Demo video](docs/images/a1.png)](docs/video/screen-capture.webm)
+
 #### Screenshots
 
 ![Setup Wallet](docs/images/a1.png)
