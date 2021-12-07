@@ -34,7 +34,7 @@ const attributes = {
     allowNull: true,
   },
   amount: {
-    type: DataTypes.DECIMAL(4),
+    type: Sequelize.REAL,
     allowNull: false,
   },
   walletId: {
